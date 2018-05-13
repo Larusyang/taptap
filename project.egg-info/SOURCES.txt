@@ -1,0 +1,13 @@
+setup.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
+tapcomment/__init__.py
+tapcomment/items.py
+tapcomment/middlewares.py
+tapcomment/pipelines.py
+tapcomment/settings.py
+tapcomment/spiders/__init__.py
+tapcomment/spiders/comment.py
