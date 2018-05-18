@@ -34,7 +34,7 @@ class TapcommentPipeline(object):
 
     def process_item(self, item, spider):
         d = self.dbpool.runInteraction(self._conditional_insert, item, spider)  # 调用插入的方法
-        log.msg("-------------------连接好了-------------------")
+       # log.msg("-------------------连接好了-------------------")
         d.addErrback(self._handle_error, item, spider)  # 调用异常处理方法
         d.addBoth(lambda _: item)
         return d
@@ -47,6 +47,6 @@ class TapcommentPipeline(object):
                       item['comment_smile'],item['comment_up'],item['comment_down'],item['comment_reply'])
         conn.execute(sql,parms)
 
-        log.msg("-------------------一轮循环完毕-------------------")
+        #log.msg("-------------------一轮循环完毕-------------------")
     def _handle_error(self, failue, item, spider):
         print(failue)
